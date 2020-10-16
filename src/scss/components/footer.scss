@@ -1,0 +1,243 @@
+.footer{
+	background-color: #181734;
+
+}
+.footer__container{
+	@extend %wrapper;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding-top: 30px;
+	padding-bottom: 35px;
+}
+.footer__links{
+	display: flex;
+	align-items: center;
+	a{
+		display: block;
+		width: 22px;
+		height: 18px;
+		background-size: cover;
+	}
+}
+.medium{
+	background: url('../img/socials-sprite.svg') -115px 0 no-repeat;
+	margin-right: 16px;
+}
+.twitter{
+	background: url('../img/socials-sprite.svg') -138px 0 no-repeat;
+	margin-right: 16px;
+}
+.telegram{
+	background: url('../img/socials-sprite.svg') -161px 0 no-repeat;
+	margin-right: 16px;
+}
+.github{
+	background: url('../img/socials-sprite.svg') -183px 0 no-repeat;
+	margin-right: 16px;
+}
+.slack{
+	width: 20px !important;
+	background: url('../img/socials-sprite.svg') -205px 0 no-repeat;
+	margin-right: 16px;
+}
+.linkedin{
+	background: url('../img/socials-sprite.svg') -91px 0 no-repeat;
+	margin-right: 16px;
+}
+
+.twitter-w{
+	background: url('../img/socials-sprite.svg') -46px 0 no-repeat;
+	margin-right: 16px;
+}
+.email{
+	background: url('../img/socials-sprite.svg') -225px 0 no-repeat;
+	width: 27px !important;
+}
+
+.linkedin-w{
+	background: url('../img/socials-sprite.svg') -23px 0 no-repeat;
+}
+.telegram-w{
+	margin-right: 16px;
+	background: url('../img/socials-sprite.svg') 0 0 no-repeat;
+}
+
+// ========== raffle ================
+.raffle{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 5;
+}
+.raffle__layout{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: 	rgba(0, 0, 0, .6);
+}
+.raffle__content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 800px;
+	max-width: 90vw;
+	background: url('../img/raffle__background.svg') center top no-repeat;
+	background-size: cover;
+	min-height: 480px;
+	border-radius: 20px;
+	color: #fff;
+
+	.center{
+		text-align: center;
+
+	}
+	.middle{
+		font-size: 25px;
+	}
+	.large{
+		font-size: 55px;
+	}
+
+}
+.raffle__text{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-shadow: 1px 1px 4px #000;
+	padding: 40px;
+	position: relative;
+	z-index: 2;
+}
+.raffle__text__item{
+	max-width: 240px;
+}
+.ruffle__btns__item{
+	background-color: #8286FD;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 15px;
+	width: 310px;
+	padding: 20px 25px;
+	box-sizing: border-box;
+	display: block;
+	margin: 20px;
+	position: relative;
+	&:after{
+		position: absolute;
+		right: 23px;
+		top: 50%;
+		transform: translateY(-50%);
+		content: '';
+		width: 20px;
+		height: 12px;
+		background: transparent url('../img/arrow.svg') left top no-repeat;
+	}
+}
+
+.ruffle__btns{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	z-index: 2;
+
+}
+.raffle__img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	width: 600px;
+	max-width: 95%;
+	img{
+		width: 100%;
+	}
+}
+.raffle__close{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: #fff;
+	width: 31px;
+	height: 31px;
+	font-size: 28px;
+	cursor: pointer;
+	top: -15px;
+	right: -15px;
+	color: #000;
+}
+
+// ========== raffle end ================
+
+.pop-up{
+	color: #fff;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.4);
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	z-index: 5;
+	display: none;
+	.video__container{
+		position:relative;
+		padding-bottom:51.95%;
+		padding-top:30px;
+		height:0;
+		overflow:hidden;
+	}
+	.pop-layout{
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+	.pop-container{
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	   	max-width: 95vw;
+	   	width: 700px;
+	   	z-index: 2;
+
+	    .video__container iframe, .video__container object, .video__container embed {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+		}
+	}
+	.close-btn{
+		position: absolute;
+		top: -20px;
+		right: -40px;
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.ruffle__btns{
+		position: relative;
+		bottom: 0;
+	}
+	.footer__container{
+		text-align: center;
+	}
+	.footer__cpr{
+		margin-bottom: 20px;
+	}
+}

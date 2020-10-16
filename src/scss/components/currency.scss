@@ -1,0 +1,29 @@
+.currency{
+	display: flex;
+	justify-content: space-between;
+	@extend %wrapper;
+	margin-top: 152px;
+}
+.currency__content__tite{
+	margin-top: 40px;
+}
+.currency__content{
+	width: 462px;
+}
+.currency__content__btn{
+	background-image: linear-gradient(to right, #8387fd 0%, #6e73fb 100%);
+	margin-bottom: 177px;
+}
+.currency__pic{
+	position: relative;
+}
+
+@media screen and (max-width: 425px) {
+	.currency{
+		margin-top: 0;
+
+	}
+	.currency__content__btn{
+		margin-bottom: 40px;
+	}
+}

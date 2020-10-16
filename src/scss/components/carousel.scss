@@ -1,0 +1,20 @@
+.carousel{
+	@extend %wrapper;
+	padding: 100px 0px;
+}
+.carousel__iitem{
+	width: 300px;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+
+	img{
+		display: block;
+	}
+}
+@media screen and (max-width: 425px) {
+	.carousel{
+		padding: 40px 0;
+	}
+}
